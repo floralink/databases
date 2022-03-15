@@ -84,9 +84,9 @@ Example index.js ([Ellenberg plugin](./src/ellenberg/index.js)):
 
 ```javascript
 export default {
-  // plugin reference
   pluginType: "taxonspecific",
-  name: "ellenberg",
+  sourceType: "local",
+  id: "ellenberg",
   version: "1991-1",
   taxonReferencePlugin: {
     name: "germansl",
@@ -96,8 +96,6 @@ export default {
   description:
     "Das ökologische Verhalten gegenüber einem bestimmten Standortfaktor [...]",
   sources: {
-    // bibliographic information for citation
-    // keys: primary, secondary, description
     primary: {
       citation:
         "Ellenberg, H. (1991): Zeigerwerte der Gefäßpflanzen (ohne Rubus). [...]",
@@ -105,46 +103,6 @@ export default {
     },
     // ...
   },
-  getDatabase: () => database,
-  // applicable filters for calculating statistics
-  filters: {
-    // the key acts as the id of the filter
-    "group-s-only": {
-      title: "nur Samenpflanzen",
-      filterKey: "group",
-      filterValue: "S",
-      onlyMatching: true,
-      default: true,
-    },
-    // ...
-  },
-  // properties/fields of the data
-  properties: {
-    indicatorL: {
-      // key of property in JSON file on taxon object
-      dataKey: "indicatorL",
-      // display title of property
-      title: "Lichtzahl",
-      // short title for graphs and summary tables
-      titleShort: "L",
-      // description of the property
-      description:
-        "Vorkommen in Beziehung zur relativen Beleuchtungsstärke [...]",
-      // scale of measure, specifies which statistics to calculate
-      scaleOfMeasure: "ordinal",
-      // enumeration of the possible value (to force the order)
-      enum: [...sharedEnum, ...sharedEnumNominal],
-      // object of possible values
-      possibleValues: {
-        ...sharedPossibleValues,
-        1: {
-          title: "Tiefschattenpflanze",
-          description: "noch bei weniger als 1 % [...]",
-        },
-        // ...
-      },
-    },
-    //...
-  },
+  database,
 };
 ```

@@ -83,6 +83,8 @@ README.md
 Example index.js ([Ellenberg plugin](./src/ellenberg/index.js)):
 
 ```javascript
+import database from "database.json";
+
 export default {
   pluginType: "taxonspecific",
   sourceType: "local",

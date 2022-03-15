@@ -14,7 +14,7 @@ Database plugin library for using using different data sources with Floralink Co
 
 # General usage
 
-You can add database plugins to your project by using the [@floralink/databases](https://npmjs.com/org/floralink/databases) npm package:
+You can add database plugins to your project by using the [@floralink/databases](https://www.npmjs.com/package/@floralink/databases) npm package:
 
 ```shell
 $ npm install @floralink/plugins

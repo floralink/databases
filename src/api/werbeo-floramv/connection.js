@@ -90,7 +90,7 @@ export async function getRawData(query, portalID = 5) {
       headers,
     });
 
-    retrievedElements = res.data.numberOfElements;
+    retrievedElements = res.data.numberOfElements || 0;
     totalElements += retrievedElements;
     allOccurrences.push(...res.data.occurrences);
 

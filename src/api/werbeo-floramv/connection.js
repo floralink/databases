@@ -67,7 +67,7 @@ export async function getRawData(query, portalID = 5) {
   // retrieve occurrence data for query in chunks
 
   let allOccurrences = [];
-  let retrievedElements;
+  let retrievedElements = -1;
   let totalElements = 0;
 
   // set header with auth token if credentials provided
@@ -81,7 +81,7 @@ export async function getRawData(query, portalID = 5) {
 
   // request occurrence data in chunks
 
-  while (!retrievedElements || retrievedElements === chunkSize) {
+  while (retrievedElements === -1 || retrievedElements === chunkSize) {
     let res = await axios.get(`/${portalID}/occurrences`, {
       params: {
         ...resolvedParams,

@@ -1,6 +1,6 @@
 {
   "name": "@floralink/databases",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Library of database plugins for Floralink Core",
   "author": "Vincent Ruge",
   "license": "MIT",

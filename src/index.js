@@ -1,10 +1,10 @@
 // api
-import werbeo from "./api/werbeo-floramv";
+import werbeo from "./api/werbeo-floramv/index";
 
 // local
-import ellenbergDB from "./local/ellenberg";
-import fukarekhenkerDB from "./local/fukarekhenker";
-import germanslDB from "./local/germansl";
-import rotelistemvDB from "./local/rotelistemv";
+import ellenbergDB from "./local/ellenberg/index";
+import fukarekhenkerDB from "./local/fukarekhenker/index";
+import germanslDB from "./local/germansl/index";
+import rotelistemvDB from "./local/rotelistemv/index";
 
 export { werbeo, ellenbergDB, fukarekhenkerDB, germanslDB, rotelistemvDB };

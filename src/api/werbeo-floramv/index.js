@@ -1,5 +1,5 @@
-import { initialize, getRawData } from "./connection";
-import { convertToOccurrenceData } from "./convert";
+import { initialize, getRawData } from "./connection.js";
+import { convertToOccurrenceData } from "./convert.js";
 
 export default {
   pluginType: "occurrencedata",

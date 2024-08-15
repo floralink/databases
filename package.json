@@ -11,10 +11,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "axios": "^1.7.2"
+    "axios": "^1.7.4"
   },
   "devDependencies": {
     "@floralink/generator": "^1.1.1",
-    "eslint": "9.5.0"
+    "eslint": "9.9.0"
   }
 }
